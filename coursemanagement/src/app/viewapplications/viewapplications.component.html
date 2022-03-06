@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" routerlink="/view">View Applications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" routerLink="/courseapp">Register for A Course</a>
+              </li>
+            </ul>
+          </div>
+      <div class="card-body">
+    
+                    <div class="col-md-12">
+                        <div class="table-wrap">
+                            <table class="table">
+                              <thead class="thead-dark">
+                                <tr>
+                                
+                                  <th>Course Name</th>
+                                  <th>Course Duration</th>
+                                  <th>Course Fee</th>
+                                  <th>Status</th>
+                                 
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="alert" role="alert" *ngFor="let Data of Datas">
+                                  
+                                  <td>{{Data.cname}}</td>
+                                  <td>{{Data.cdu}}</td>
+                                  <td>{{Data.cf}}</td>
+                                  <td style="color: orangered;" *ngIf="Data.status=='applied'">{{Data.status}}</td>
+                                  <td style="color: green;" *ngIf="Data.status=='Accepted'">{{Data.status}}</td>
+                                  <td style="color: red;" *ngIf="Data.status=='Rejected'">{{Data.status}}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                
+            </div>
+      </div>
+    </div>
+    </div>
+
+

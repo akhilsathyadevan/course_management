@@ -1,0 +1,15 @@
+button{
+    padding:10px;
+    margin:0px;
+    background-color: red;
+    border-radius: 100px;
+    cursor:pointer;
+    border:0px;
+}
+.table-wrap{
+    border:2px solid rgb(41, 4, 71);
+    padding:2em;
+    border-radius: 15px;
+    margin-top: 8px;
+    background-color: antiquewhite;
+}

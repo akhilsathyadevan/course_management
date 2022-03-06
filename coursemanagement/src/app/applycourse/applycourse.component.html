@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" routerLinkv="/view">View Applications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" routerLink="/courseapp">Register for A Course</a>
+              </li>
+            </ul>
+          </div>
+      <div class="card-body">
+    
+                    <div class="col-md-12">
+                        <div class="table-wrap">
+                            <table class="table">
+                              <thead class="thead-dark">
+                                <tr>
+                                
+                                  <th>Course Name</th>
+                                  <th>Course Description</th>
+                                  <th>Course Fee</th>
+                                  <th>Course Duration</th>
+                                 
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="alert" role="alert" *ngFor="let Course of Courses">
+                                  
+                                  <td>{{Course.cname}}</td>
+                                  <td>{{Course.cd}}</td>
+                                  <td>{{Course.cf}}</td>
+                                  <td>{{Course.cdu}}</td>
+                                 
+                                  <td><button class="btn btn-primary" (click)="apply(Course)">Apply</button></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                
+            </div>
+      </div>
+    </div>
+    </div>
+

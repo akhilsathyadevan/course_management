@@ -1,0 +1,41 @@
+<div class="wrapper">
+    <div class="inner">
+        <img src="../../assets/images/image-1.png" alt="" class="image-1">
+        <form [formGroup]="signupform" (ngSubmit)='insertUsers()' >
+            <h3>New Account?</h3>
+            <div class="form-holder">
+                <span class="lnr lnr-user"></span>
+                <input type="text" class="form-control" name="name" placeholder="Full Name" formControlName="name" >
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-user"></span>
+                <input type="text" class="form-control" name="email" placeholder="Email" formControlName="email" >
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-user"></span>
+                <input type="text" class="form-control" name="phone" placeholder="Phone Number" formControlName="phone" >
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-phone-handset"></span>
+                <select name="role" id="role" formControlName="role">
+                    <option value selected>Select Role</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Select">Student</option>
+                  </select>
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-lock"></span>
+                <input type="text" class="form-control" name="password" placeholder="Password"   formControlName="password">
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-lock"></span>
+                <input type="text" class="form-control" name="password1" placeholder="Confirm Password"   formControlName="password1">
+            </div>
+            <button >
+                <span>Register</span>
+            </button>
+        </form>
+        <img src="../../assets/images/image-2.png" alt="" class="image-2">
+    </div>
+    
+</div>

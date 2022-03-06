@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/check">View Applications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/viewc">View Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " (click)="delete()">Delete Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/addc">Add Course</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Welcome {{Data.name}} to your Profile</h5>
+        <p class="card-text">Here you can add and manage your courses</p>
+        <a routerLink="/addc" class="btn btn-primary">My courses</a>
+      </div>
+    </div>
+    </div>

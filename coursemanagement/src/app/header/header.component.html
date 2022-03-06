@@ -1,0 +1,32 @@
+<div class="bgded overlay" style="background-image:url('../../assets/images/demo/backgrounds/01.png');"> 
+    <div class="wrapper row0">
+      <div id="topbar" class="hoc clear"> 
+        <p class="fl_left nospace"><i class="fas fa-phone"></i> +00 (123) 456 7890</p>
+        <p class="fl_right nospace"><a class="btn btn success" routerLink="/signup" *ngIf='!_auth.loggedIn()'>SignUp</a></p>
+        <p class="fl_right nospace"><a class="btn btn success" routerLink="/login" *ngIf='!_auth.loggedIn()'>Login</a></p>
+        <p class="fl_right nospace"><a class="btn btn success" (click)="logout()" *ngIf='_auth.loggedIn()'>Logout</a></p>
+      </div>
+    </div>
+    
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <div id="logo" class="fl_left"> 
+         
+          <h1><a href="index.html">teach Me</a></h1>
+         
+        </div>
+        <nav id="mainav" class="fl_right"> 
+         
+          <ul class="clear">
+            <li class="active"><a routerLink="/">Home</a></li>
+            <li><a  routerLink="/noti">Notifications</a></li>
+            <li><a routerLink="/addp" *ngIf='_auth.loggedIn()&&_auth.professorloggedIn()'>Add a Profile</a></li>
+            <li><a routerLink="/adds" *ngIf='_auth.loggedIn()&&_auth.studentloggedIn()'>Add a Profile</a></li>
+            <li><a (click)="viewprofessor();" *ngIf='_auth.loggedIn()&&_auth.professorloggedIn()'>view professor</a></li>
+            <li><a routerLink="/student" *ngIf='_auth.loggedIn()&&_auth.studentloggedIn()'>view student</a></li>
+          </ul>
+        
+        </nav>
+      </header>
+    </div> 
+</div>    

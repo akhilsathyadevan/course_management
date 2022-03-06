@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link " routerLink="/check">View Applications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/viewc">View Courses</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link " (click)="delete()">Delete Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " routerLink="/addc">Add Course</a>
+              </li>
+            </ul>
+          </div>
+      <div class="card-body">
+    
+                    <div class="col-md-12">
+                        <div class="table-wrap">
+                            <table class="table">
+                              <thead class="thead-dark">
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Qualifictaion</th>
+                                  <th>Course Name</th>
+                                  <th>Seats Avilable</th>
+                                  <th>Status</th>
+                                 
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="alert" role="alert" *ngFor="let Data of Datas">
+                                  
+                                  <td>{{Data.student_name}}</td>
+                                  <td>{{Data.qualification}}</td>
+                                  <td>{{Data.cname}}</td>
+                                  <td>{{Data.sa}}</td>
+                                  <td style="color: orangered;" *ngIf="Data.status=='applied'">{{Data.status}}</td>
+                                  <td style="color: green;" *ngIf="Data.status=='Accepted'">{{Data.status}}</td>
+                                  <td style="color: red;" *ngIf="Data.status=='Rejected'">{{Data.status}}</td>
+                                  <td><button class="btn btn-primary" (click)='Accept(Data.student_id,Data.cid,Data.sa)' [disabled]="Data.status=='Accepted'||Data.status=='Rejected'">Accept</button>
+                                  <button class="btn btn-primary" (click)='Reject(Data.student_id,Data.cid)' [disabled]="Data.status=='Accepted'||Data.status=='Rejected'">Reject</button></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                
+            </div>
+      </div>
+    </div>
+    </div>
+
+
+

@@ -29,7 +29,10 @@ app.post('/signup',function(req,res){
         password1:req.body.user.password1
     }
     var n=new signupdata(x)
-    n.save();
+    n.save()
+    .then((data)=>{
+        res.send(data);
+    })
 })
 
 app.post("/login",function(req,res){
